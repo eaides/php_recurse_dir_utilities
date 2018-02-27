@@ -88,13 +88,6 @@ will be set with the default permissions for the user that runs the command.
 
 # examples:
 
-<?php
-
-use eaides\php_recurse_dir_utilities\php_recurse_dir_utilities as dir_utilities;
-
-myClass()
-{
-        /** @var dir_utilities $ud */
         $ud = new dir_utilities();
         $ud->setGroupDefault('developers')->setOwnerDefault('www-data');
         $ud->setPermissionsDirs(0775)->setPermissionsFiles(0664);
@@ -107,4 +100,3 @@ myClass()
         
         $ud->recurse_rmdir('/my_folder/to/check/to', true); // with debug
         $ud->recurse_rmdir('/my_folder/to/check/to');       // without debug
-}
